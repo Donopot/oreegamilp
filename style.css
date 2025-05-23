@@ -336,12 +336,11 @@ input:focus {
 }
 
 .hero {
-  background-color: #4C9A2A;
+  background-color: rgba(76, 154, 42, 0.532);
   color: #FFFFFF;
   text-align: center;
   padding: 4rem 2rem;
   position: relative;
-  opacity:0.7;
 }
 
 .hero h1 {
