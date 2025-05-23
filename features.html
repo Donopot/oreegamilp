@@ -1,52 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GreenShelf - Application Anti-Gaspillage</title>
+  <title>GreenShelf - Nos Fonctionnalités</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav class="navbar">
   <div class="navbar-container">
     <div class="logo">GreenShelf</div>
     <ul class="nav-links">
-      <li><a href="features.html">Fonctionnalités</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="inscription.html">Inscription</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-
-
 <header>
-  <h1>GreenShelf</h1>
-  <p>L'application anti-gaspillage alimentaire</p>
+  <h1>Découvrez GreenShelf</h1>
+  <p>Toutes nos fonctionnalités pour réduire votre gaspillage alimentaire.</p>
 </header>
 
 <section id="features">
   <h2>Nos Fonctionnalités</h2>
   <div class="features">
+
     <div class="card">
-      <h3>Suivi intelligent des aliments</h3>
-      <p>Gérez vos stocks et évitez le gaspillage avec des rappels personnalisés.</p>
+      <h3>Suivi Intelligent des Aliments</h3>
+      <p>Recevez des rappels personnalisés pour gérer efficacement vos stocks alimentaires et éviter le gaspillage.</p>
     </div>
+
     <div class="card">
-      <h3>Recettes anti-gaspi</h3>
-      <p>Découvrez des idées de recettes pour consommer intelligemment.</p>
+      <h3>Recettes Anti-Gaspillage</h3>
+      <p>Accédez à des recettes simples et savoureuses conçues spécialement pour utiliser vos aliments avant leur expiration.</p>
     </div>
+
     <div class="card">
-      <h3>Statistiques d'économie</h3>
-      <p>Visualisez vos économies et votre impact écologique en temps réel.</p>
+      <h3>Statistiques et Économies</h3>
+      <p>Visualisez en temps réel vos économies financières et votre impact positif sur l’environnement.</p>
     </div>
+
+    <div class="card">
+      <h3>Alertes de Péremption</h3>
+      <p>Ne manquez jamais la date limite de consommation grâce à nos notifications personnalisées.</p>
+    </div>
+
+    <div class="card">
+      <h3>Partage Communautaire</h3>
+      <p>Partagez vos astuces anti-gaspi et collaborez avec d’autres utilisateurs pour une consommation plus responsable.</p>
+    </div>
+
+    <div class="card">
+      <h3>Analyse des Habitudes Alimentaires</h3>
+      <p>Comprenez mieux vos habitudes de consommation pour ajuster vos achats et minimiser les pertes.</p>
+    </div>
+
   </div>
 </section>
 
+<section class="cta" id="cta">
+  <h2>Rejoignez le défi #ZéroGaspi</h2>
+  <p>Inscrivez-vous dès maintenant pour profiter pleinement de toutes les fonctionnalités.</p>
+  <form>
+    <input type="text" name="prenom" placeholder="Votre prénom" required aria-label="Prénom" />
+    <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail" />
+    <button type="submit">Je m'inscris</button>
+    <div id="loader" class="loader"></div>
+  </form>
+</section>
 
-
+<footer id="footer">
   <p>#ZéroGaspi #GreenShelfApp #ConsommationResponsable</p>
 </footer>
 
@@ -57,12 +84,6 @@
   </div>
 </div>
 
-
-<div class="back-home">
-  <a href="index.html">← Retour à l’accueil</a>
-</div>
-
-<footer id="footer"><p>#ZéroGaspi #GreenShelfApp #ConsommationResponsable</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
