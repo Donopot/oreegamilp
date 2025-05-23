@@ -76,3 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const icons = document.querySelectorAll(".icon-fly");
+    icons.forEach(icon => {
+      icon.style.left = Math.random() * 100 + "vw";
+      icon.style.top = Math.random() * 100 + "vh";
+      icon.style.animationDuration = (6 + Math.random() * 6) + "s";
+      icon.style.width = icon.style.height = (30 + Math.random() * 30) + "px";
+    });
+  });
