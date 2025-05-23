@@ -281,5 +281,11 @@ footer {
   background-color: #3d8022;
   transform: translateY(-3px);
 }
+.contact-section {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 
