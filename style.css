@@ -318,4 +318,27 @@ input:focus {
   transition: opacity 0.3s ease;
 }
 
+.hero {
+  background-color: #4C9A2A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
 
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
