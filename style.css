@@ -32,7 +32,9 @@ h2 {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  padding: 2rem 0;
 }
+
 .card {
   background-color: #E5F4E3;
   color: #2E2E2E;
@@ -44,6 +46,16 @@ h2 {
 }
 .card:hover {
   transform: translateY(-5px);
+}
+.card img {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .cta {
