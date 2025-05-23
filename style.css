@@ -81,8 +81,8 @@ h2 {
   font-size: 1rem;
 }
 .cta button {
-  background-color: #4C9A2A;
-  color: white;
+  background-color: #747453;
+  color: rgb(40, 192, 91);
   border: none;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -96,7 +96,7 @@ h2 {
 
 .loader {
   border: 4px solid #eee;
-  border-top: 4px solid #4C9A2A;
+  border-top: 4px solid #4b982a;
   border-radius: 50%;
   width: 24px;
   height: 24px;
