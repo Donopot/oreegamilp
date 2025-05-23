@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".cta form");
   const loader = document.getElementById("loader");
@@ -11,7 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = form.elements["email"].value.trim();
 
     if (!prenom || !email || !validateEmail(email)) {
-      alert("Veuillez remplir tous les champs correctement.");
+      form.querySelectorAll("input").forEach(input => {
+        if (!input.value.trim()) {
+          input.style.border = "1px solid red";
+        }
+      });
       return;
     }
 
