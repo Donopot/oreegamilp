@@ -224,3 +224,42 @@ footer {
   animation: fadeIn 0.8s forwards;
   animation-delay: 0.2s;
 }
+/* CTA Téléchargement Application GreenShelf */
+.download-app {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3f9f1;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.download-app h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.download-app .app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.download-app .app-store-btn,
+.download-app .google-play-btn {
+  display: inline-block;
+  background-color: #4C9A2A;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.download-app .app-store-btn:hover,
+.download-app .google-play-btn:hover {
+  background-color: #3d8022;
+}
