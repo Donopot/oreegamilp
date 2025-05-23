@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <link rel="stylesheet" href="css.css">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GreenShelf - Application Anti-Gaspillage</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css.css"> <!-- AJOUTÉ -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -37,16 +36,66 @@
   <h2>Rejoignez le défi #ZéroGaspi</h2>
   <p>Inscrivez-vous pour recevoir des conseils et accéder à l'application</p>
   <form>
-    <input type="text" name="prenom" placeholder="Votre prénom" required />
-    <input type="email" name="email" placeholder="Votre e-mail" required />
+    <input type="text" name="prenom" placeholder="Votre prénom" required aria-label="Prénom" />
+    <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail" />
     <button type="submit">Je m'inscris</button>
     <div id="loader" class="loader"></div>
   </form>
 </section>
+
 <footer>
   <p>#ZéroGaspi #GreenShelfApp #ConsommationResponsable</p>
 </footer>
 
-<script src="js.js"></script> <!-- AJOUTÉ -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h3>Merci pour votre inscription !</h3>
+    <button id="popup-close">Fermer</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".cta form");
+    const loader = document.getElementById("loader");
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("popup-close");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const prenom = form.elements["prenom"].value.trim();
+      const email = form.elements["email"].value.trim();
+
+      if (!prenom || !email || !validateEmail(email)) {
+        alert("Veuillez remplir tous les champs correctement.");
+        return;
+      }
+
+      loader.style.display = "inline-block";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        form.reset();
+        showPopup();
+      }, 1200);
+    });
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function showPopup() {
+      if (popup) popup.style.display = "flex";
+    }
+
+    if (popup && closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
