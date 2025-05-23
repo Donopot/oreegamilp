@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -12,7 +13,6 @@ header {
   padding: 2rem;
   text-align: center;
 }
-
 header h1 {
   margin: 0;
   font-size: 2.5rem;
@@ -21,7 +21,6 @@ header h1 {
 section {
   padding: 2rem;
 }
-
 h2 {
   text-align: center;
   margin-bottom: 1rem;
@@ -45,11 +44,9 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
 }
-
 .card img {
   display: block;
   margin: 0 auto;
@@ -70,14 +67,12 @@ h2 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
-
 .cta form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-
 .cta input {
   padding: 0.75rem;
   border: 1px solid #ccc;
@@ -85,7 +80,6 @@ h2 {
   width: 100%;
   font-size: 1rem;
 }
-
 .cta button {
   background-color: #747453;
   color: rgb(40, 192, 91);
@@ -96,7 +90,6 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .cta button:hover {
   background-color: #3d8022;
 }
@@ -111,11 +104,8 @@ h2 {
   margin-left: 10px;
   display: none;
 }
-
 @keyframes spin {
-  to { transform: rotate(360deg);
-}
-
+  to { transform: rotate(360deg); }
 }
 
 footer {
@@ -137,10 +127,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 1001;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
-
 .popup-content {
   background: white;
   padding: 2rem;
@@ -150,12 +137,10 @@ footer {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   animation: popIn 0.3s ease;
 }
-
 .popup-content h3 {
   margin-top: 0;
   color: #4C9A2A;
 }
-
 .popup-content button {
   background-color: #4C9A2A;
   color: white;
@@ -166,16 +151,9 @@ footer {
   margin-top: 1rem;
   font-size: 1rem;
 }
-
 @keyframes popIn {
-  from { transform: scale(0.8); opacity: 0;
-}
-
-to {
-  transform: scale(1); opacity: 1;
-  opacity: 1; transform: translateY(0);
-}
-
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 
@@ -220,11 +198,17 @@ to {
   color: #4C9A2A;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+
 .back-home {
   margin: 2rem;
   text-align: center;
 }
-
 .back-home a {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -234,27 +218,24 @@ to {
   border-radius: 25px;
   transition: background-color 0.3s ease;
 }
-
 .back-home a:hover {
   background-color: #3d8022;
 }
+
 
 /* Animations */
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
-
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);
-}
-
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .card, .cta, .popup-content {
   opacity: 0;
   animation: fadeIn 0.8s forwards;
   animation-delay: 0.2s;
 }
-
 /* CTA Téléchargement Application GreenShelf */
 .download-app {
   text-align: center;
@@ -312,18 +293,29 @@ to {
   background-color: #3d8022;
   transform: translateY(-3px);
 }
-
 .contact-section {
   text-align: center;
   padding: 2rem;
   max-width: 600px;
   margin: 0 auto;
 }
-
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 input:focus {
   outline: none;
   border: 2px solid #4C9A2A;
   transition: border-color 0.3s ease;
+}
+
+.popup {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .hero {
@@ -350,7 +342,6 @@ input:focus {
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: 0.3s;
 }
-
 .hero img {
   margin-top: 2rem;
   max-width: 100%;
@@ -369,4 +360,10 @@ input:focus {
 
 .hero img:hover {
   transform: scale(1.03);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
