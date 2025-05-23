@@ -1,32 +1,42 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".cta form");
+  const forms = document.querySelectorAll("form");
   const loader = document.getElementById("loader");
   const popup = document.getElementById("popup");
   const closeBtn = document.getElementById("popup-close");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  forms.forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const prenom = form.elements["prenom"].value.trim();
-    const email = form.elements["email"].value.trim();
+      const prenom = form.elements["prenom"].value.trim();
+      const email = form.elements["email"].value.trim();
+      let valid = true;
 
-    if (!prenom || !email || !validateEmail(email)) {
       form.querySelectorAll("input").forEach(input => {
         if (!input.value.trim()) {
           input.style.border = "1px solid red";
+          valid = false;
+        } else {
+          input.style.border = "";
         }
       });
-      return;
-    }
 
-    loader.style.display = "inline-block";
+      if (!validateEmail(email)) {
+        form.elements["email"].style.border = "1px solid red";
+        valid = false;
+      }
 
-    setTimeout(() => {
-      loader.style.display = "none";
-      form.reset();
-      showPopup();
-    }, 1200);
+      if (!valid) return;
+
+      loader.style.display = "inline-block";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        form.reset();
+        showPopup();
+      }, 1200);
+    });
   });
 
   function validateEmail(email) {
