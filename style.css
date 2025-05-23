@@ -341,6 +341,7 @@ input:focus {
   text-align: center;
   padding: 4rem 2rem;
   position: relative;
+  opacity:0.7;
 }
 
 .hero h1 {
